@@ -1,0 +1,12 @@
+apiVersion: mondane.org/v1alpha1
+kind: User
+metadata:
+  name: sven
+  namespace: mondane-user
+spec:
+  email: sven@haardiek.de
+  urls:
+    - "blog.haardiek.org"
+    - "lkiesow.io"
+    - "blog.haardiek.org/fake"
+  username: sven
