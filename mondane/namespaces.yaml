@@ -1,0 +1,7 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: mondane-user
+  labels:
+    mondane.org/watch: "true"

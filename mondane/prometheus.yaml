@@ -1,0 +1,26 @@
+
+---
+apiVersion: monitoring.coreos.com/v1
+kind: Prometheus
+metadata:
+  name: prometheus
+  namespace: mondane
+spec:
+  serviceMonitorNamespaceSelector:
+    matchLabels:
+      mondane.org/watch: "true"
+  serviceMonitorSelector:
+    matchLabels:
+      mondane.org/watch: "true"
+  ruleNamespaceSelector:
+    matchLabels:
+      mondane.org/watch: "true"
+  ruleSelector:
+    matchLabels:
+      mondane.org/watch: "true"
+  serviceAccountName: prometheus
+  alerting:
+    alertmanagers:
+      - namespace: mondane
+        name: alertmanager-operated
+        port: web
